@@ -1,10 +1,12 @@
 // /api/index.js
+require('dotenv').config();
 
 import { IncomingMessage, ServerResponse } from 'http';
 
 // Shopify API credentials (hardcoded for now, should be environment variables)
-const SHOPIFY_ACCESS_TOKEN = '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';
-const SHOPIFY_STORE = 'ezxeyb-et.myshopify.com';
+const SHOPIFY_ACCESS_TOKEN = process.env.SHOPIFY_ACCESS_TOKEN;
+const SHOPIFY_STORE = process.env.SHOPIFY_STORE;
+
 
 
 export default async (req, res) => {
